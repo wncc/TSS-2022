@@ -4,7 +4,7 @@ Greetings from Web & Coding Club!
 WnCC proudly presents the following courses under Technical Summer School 2022 - 
 
 * [Introduction to Blockchain](./Introduction%20to%20Blockchain)
-* [Introduction to Development: React JS & NEXT JS](./Introduction%20to%20Dev)
+* [Introduction to Development: React JS & NEXT JS](./Introduction%20to%20Development)
 
 Coders Together Strong!
 ***
