@@ -28,12 +28,14 @@ Go onto [**download page**](https://code.visualstudio.com/download) of VS Code c
 
 ###### For Linux
 Type the following code in the terminal:
-`wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -`
-`sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-`
-`sudo apt update
-`
+`wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -` 
+
+`sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"`  
+
+`sudo apt update`
+
 `sudo apt install code`
+
 By now, VS Code should be installed on your system and you are ready to go code with it.
 
 Since, now we are done with the installation part, you can visit the beginners' guide to VS Code [here](https://code.visualstudio.com/docs/introvideos/basics) in order to get familiar with its use.
@@ -70,6 +72,5 @@ Why do we need another CSS framework when Bootstrap will do? Well, there are a f
  - Compared to Bootstrap, Tailwind CSS provides far more customization options. 
 
 You can start learning Tailwind CSS by following [**this link**](https://tailwindcss.com/docs/installation). You might also want to view [**this** playlist](https://youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw) to learn Tailwind CSS. 
-
 
 
