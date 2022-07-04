@@ -23,11 +23,11 @@ When you design your WebApp and see it in action in front of you, it always give
 <b><h2>Schedule</h2></b>
 <br>
 <ul>
-<li><a href="https://github.com/navyanshmahla/TSS-2022/Introduction%to%Development/Week%1">Week 1</a>: Basics of JavaScript, CSS and CSS frameworks like bootstrap and tailwind, setting up VS Code. 
+<li><b><i>Week 1</i></b>: Basics of JavaScript, CSS and CSS frameworks like bootstrap and tailwind, setting up VS Code. 
 
-<li><a href="https://github.com/navyanshmahla/TSS-2022/Introduction%to%Development/Week%2">Week 2</a>:                Basics of React JS, components, pure components and creating your first react app using Vite.  
-<li><a href="https://github.com/navyanshmahla/TSS-2022/Introduction%to%Development/Week%3">Week 3</a>: React State, lifecycles and hooks. Creating first custom hook, introduction to state management libraries such as Recoil JS.
-<li><a href="https://github.com/navyanshmahla/TSS-2022/Introduction%to%Development/Week%4">Week 4</a>: In depth usage of Recoil JS, Usage of Next JS and its advantages over React JS.                                    
+<li><b><i>Week 2</i></b>:                Basics of React JS, components, pure components and creating your first react app using Vite.  
+<li><b><i>Week 3</i></b>: React State, lifecycles and hooks. Creating first custom hook, introduction to state management libraries such as Recoil JS.
+<li><b><i>Week 4</i></b>: In depth usage of Recoil JS, Usage of Next JS and its advantages over React JS.                                    
 </ul>
 <br>
 <h2> <b>Assignments</b></h2>
