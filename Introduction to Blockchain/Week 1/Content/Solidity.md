@@ -1,0 +1,186 @@
+# Solidity
+
+## Solidity ( the language of ether )
+
+To write smart contracts we use a programming language called solidity. It is an object-oriented programming language that is quite similar to C++. It is basically a combination of JavaScript, Python, and C++.
+
+Here is a nice article and a short video to give you an introduction to solidity:- 
+
+- [https://moralis.io/solidity-explained-what-is-solidity/](https://moralis.io/solidity-explained-what-is-solidity/)
+- [https://youtu.be/kdvVwGrV7ec](https://youtu.be/kdvVwGrV7ec)
+
+## Let’s start with a compiler
+
+To work on solidity we use remix as a compiler. It is an open-source application available online that you don’t even need to download.
+
+[https://remix.ethereum.org](https://remix.ethereum.org/)
+
+Watch this video to get acquainted with the interface:-
+
+[https://youtu.be/WmeWbo7wzGI](https://youtu.be/WmeWbo7wzGI)
+
+## Let’s begin
+
+Read these tutorials to learn in-depth about solidity : 
+
+[https://www.tutorialspoint.com/solidity/index.htm](https://www.tutorialspoint.com/solidity/index.htm) 
+
+The topics which you have to read are:-
+
+- **Basic Syntax**
+    
+    In this, we talk about pragma which basically tells the compiler which version of solidity we are using. 
+    
+    ```solidity
+    pragma solidity >=0.4.0 <0.6.0;
+    pragma solidity ^0.4.0;
+    ```
+    
+    Here both statements are valid the first one is saying we are using versions between 0.4.0 and       0.6.0 while in the second statement all the versions between 0.4.0 and 0.5.0 are valid. 
+    
+- **First application**
+    
+    It is a nice example to try.
+    
+- **Comments**
+- **Types**
+    
+    Here we talk about different data types which are similar to what you have learned in C++.
+    
+    Here in Solidity, there are special data types :
+    
+    - `address`: Holds a 20-byte value (size of an Ethereum address).
+    - `address payable`: Same as `address`, but with the additional members `transfer` and `send`.
+    
+    The idea behind this distinction is that `address payable`is an address you can send Ether to while a plain `address`cannot be sent Ether.
+    
+    Here is another nice blog about data types to which you can refer:-(optional)
+    
+    [https://blog.logrocket.com/ultimate-guide-data-types-solidity/](https://blog.logrocket.com/ultimate-guide-data-types-solidity/)
+    
+    Here is a nice video explaining the difference between an address and address payable - 
+    
+    [https://youtu.be/_Nvl-gz-tRs](https://youtu.be/_Nvl-gz-tRs)
+    
+- **Variables**
+    
+    Variables are of three types 
+    
+    1. Fixed sized: bool, int, etc.
+    2. Variable size types
+    3. User-defined types
+    
+    [https://youtu.be/TNZLonjrLYE](https://youtu.be/TNZLonjrLYE)
+    
+- **Variable Scope**
+    
+    Private: It can be accessed only within the same contract, not any other contracts.
+    
+    Internal: `internal`state variables can be accessed from a contract that defined them or any other that inherits from a smart contract. Important to note that smart contract state variables are `internal`by default.
+    
+    Public: Public state variables can be accessed from any smart contract, including those that hold them or any address. Solidity generates for the `public`state variable a getter function.
+    
+- **Operators**
+- **Loops**
+- **Decision making**
+- **Strings**
+- **Enums**
+    
+    If you are not familiar with enums in C++ read this:-
+    
+    [https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-enum](https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-enum)
+    
+- **Reference Types**
+    
+    Reference types comprise structs, arrays, and mappings. If you use a reference type, you always have to explicitly provide the data area where the type is stored: `memory`(whose lifetime is limited to a function call), `storage`(the location where the [state variables](https://www.tutorialspoint.com/solidity/solidity_variables.htm#:~:text=State%20Variables%20%E2%88%92%20Variables%20whose%20values,get%20information%20about%20the%20blockchain.) are stored) or `calldata`(special data location that contains the function arguments, only available for external function call parameters).
+    
+    - Arrays
+        
+        Dynamic arrays are created by using new keyword.
+        
+        ```solidity
+        uint size = 3;
+        uint balance[] = new uint[](size);
+        ```
+        
+        There is another member in array called pop which is used to delete the last element in the array.
+        
+        We can also use delete keyword to delete an element of an array 
+        
+        ```solidity
+        delete array_name[index]
+        ```
+        
+        Here is a video to learn more about arrays - 
+        
+        [https://youtu.be/MPBOnChpi0c](https://youtu.be/MPBOnChpi0c)
+        
+    - Structs
+    - Mapping
+- **Conversions**
+    
+    Address payable can be converted to address but the opposite is not true.
+    
+- **Ether units**
+- **Special variables**
+    
+    Watch this video to get a better understanding of inbuilt variables -
+    
+    [https://www.youtube.com/embed/XiDs_UmEDG0?end=270](https://www.youtube.com/embed/XiDs_UmEDG0?end=270)
+    
+- **Style Guide**
+
+Read the whole function part
+
+### **Functions**
+
+The basics syntax of a function is
+
+```solidity
+function name of function(<parameter types>) type scope returns(return type){
+}
+```
+
+Functions are of two types:-
+
+1. Internal - Internal functions can only be called inside the current contract (more specifically, inside the current code unit, which also includes internal library functions and inherited functions) because they cannot be executed outside of the context of the current contract. Calling an internal function is realized by jumping to its entry label, just like when calling a function of the current contract internally. 
+2. External - External functions are meant to be used outside the current contract. They cannot be used in the same contract. To use external functions in the same contract use              this.<function name>. External functions consist of an address and a function signature and they can be passed via and returned from external function calls.
+
+By default all functions are internal.
+
+[Scope](https://youtu.be/nep2-1Zzptk) of function:-
+
+- View
+    
+    • `view` functions can be converted to `non-payable` functions
+    
+- Pure
+    
+    • `pure` functions can be converted to `view` and `non-payable` functions
+    
+- Payable
+    
+    • `payable` functions can be converted to `non-payable` functions
+    
+
+### Solidity common patterns
+
+This part discusses how to give more security to your smart contracts and blockchain network.
+
+Watch the first 3 videos to revise your concepts.
+
+[https://www.dappuniversity.com/articles/solidity-tutorial](https://www.dappuniversity.com/articles/solidity-tutorial)
+
+## Smart contracts
+
+The main difference between Bitcoin and Ethereum is because of smart contracts. 
+
+A smart contract is a self-executing contract with the terms of the agreement between buyer and seller being directly written into lines of code. The code and the agreements contained therein exist across a distributed, decentralized blockchain network. The code controls the execution, and transactions are trackable and irreversible.
+
+It is basically a real-life contract made on a computer. It executes when all the requirements written on it are met. People can transfer money and keep track of work reports through these contracts. These contracts are not made specifically for blockchain but the blockchain network has made it possible to securely transfer smart contracts without any chances of fraud. Solidity is basically a language built to write smart contracts. 
+
+Here are some nice articles and videos about smart contracts. 
+
+[https://www.techtarget.com/searchcio/definition/smart-contract](https://www.techtarget.com/searchcio/definition/smart-contract)
+
+[https://youtu.be/ZE2HxTmxfrI](https://youtu.be/ZE2HxTmxfrI)
