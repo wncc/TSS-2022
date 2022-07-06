@@ -1,0 +1,164 @@
+# Introduction to Blockchain
+
+# Introduction to blockchain
+
+The first thing that clicks in our mind when we hear Blockchain is "Bitcoin"! Of course, they are related to each other but are not the same. Bitcoin is a cryptocurrency, a virtual currency that was the first successful blockchain product. On the contrary, blockchain is a distributed ledger technology that underlies cryptocurrencies like Bitcoin but does not restrict itself to the FinTech industry only. So, let’s first define what blockchain is:
+
+As per the wiki definition, "A Blockchain is the continuously growing list of records, called blocks, which are linked and secured using cryptography. Each block typically contains a hash pointer as a link to a previous block, a timestamp, and transaction data".
+
+The concept of blockchain involves a decentralized consensus via a distributed, permission less, and trustless protocol.
+
+The reason why the blockchain has gained so much admiration is that:
+
+- It is not owned by a single entity, hence it is decentralized
+- The data is cryptographically stored on the blockchain
+- It is immutable, so no one can tamper with the data that is inside the blockchain
+- The blockchain is transparent, so one can track the data if they want to
+
+## Looking beyond the technical jargon….
+
+A blockchain is made up of two primary components: a decentralized network facilitating and verifying transactions, and the immutable ledger that the network maintains. Everyone in the network can see this shared transaction ledger, but there is no single point of failure from which records or digital assets can be hacked or corrupted. Because of that decentralized trust, there's also no one organization controlling that data, be it a big bank or a tech giant like Facebook or Google. No third parties serve as the gatekeepers of the internet. The power of blockchain's distributed ledger technology has applications across every kind of digital record and transaction. 
+
+ For further understanding, the following can be helpful: [https://www.simplilearn.com/tutorials/blockchain-tutorial](https://www.simplilearn.com/tutorials/blockchain-tutorial)
+
+## History of blockchain
+
+The first blockchain-like protocol was proposed by cryptographer David Chaum in 1982. Later in 1991, Stuart Haber and W. Scott Stornetta wrote about their work on [Consortiums](https://www.anf.es/pdf/Haber_Stornetta.pdf).
+
+But it was Satoshi Nakamoto (presumed pseudonym for a person or group of people) who invented and implemented the first blockchain network after deploying the world’s first digital currency, Bitcoin.
+
+## Designing a blockchain
+
+There are seven major tasks that need to be addressed when designing and
+developing a software system that manages ownership by using a purely
+distributed peer-to-peer system of ledgers in an open and untrustworthy
+environment:
+
+• Describing ownership
+• Protecting ownership
+• Storing transaction data
+• Preparing ledgers to be distributed in an untrustworthy environment
+• Distributing the ledgers
+• Adding new transactions to the ledgers
+• Deciding which ledgers represent the truth
+
+Transactions form the heart of the blockchain problem. Transaction data provide the following information for describing a transfer of ownership:
+• An identifier of the account that initiates the transaction and is to transfer ownership to another    account
+• An identifier of that account that is to receive ownership
+• The amount of the goods to be transferred
+• The time the transaction is to be done
+• A fee to be paid to the system for executing the transaction
+• A proof that the owner of the account who hands-off ownership agrees with that transfer.
+
+The complete history of transaction data is an audit trail that provides evidence of how people acquired and handed off ownership. A transaction is executed by adding it to the history of
+transaction data and allowing it to influence the result of aggregating them. The order in which transaction data are added to the history must be preserved in order to yield identical results
+when aggregating these data. And this brings us to the next topic on verification of the authenticity of a transaction .
+
+## The authenticity of a user and transaction
+
+The Blockchain must ensure that any transaction announcement reaching a node must be correct and genuine. A few security checks used are:-
+
+### Digital Signature:
+
+All the conventional banking transactions are verified for authenticity using your signature. Similarly, all your transactions in Blockchains are verified using a digital signature. A digital signature is nothing but the result of a Mathematical Function. The mathematical function consists of three important functions.
+
+- A password generator, (sk, pk) = GeneratePassword(size). This password generator generates a secret key and public key when the input size is given. The 'sk' is the secret key and is supposed to be kept secret. The 'pk' is the public key that is made available to everyone in the network. Note that it is impossible to guess the secret key if you have the public key.
+- A signature on the document, sign = Signature(sk, msg). The next step involves formation of a signed transaction, which is again a mathematical function whose input is your transaction message and the secret key of the person initializing the transaction. Now, this sign can be safely transmitted and sent to other nodes.
+- Finally, a function to verify the authenticity, valid_or_not = verify(pk, msg, sign). A function then verifies the authenticity by comparing the sign, the message and the public key of the person initializing the transaction. The function returns a true or a false depending upon whether the user is authentic or not.
+
+This was how a Digital Signature works in the context of Blockchain. [Here is an article](https://medium.com/faun/what-are-digital-signatures-and-how-do-they-work-195b18c4f42c) that elucidates the concept of digital signatures in general, while [this article](https://medium.com/@xragrawal/digital-signature-from-blockchain-context-cedcd563eee5) talks about them more from the perspective of blockchains.
+
+There are various other algorithms implemented for verifying the signatures of the user, but the idea remains the same. For a more mathematical treatment of the algorithm, refer to the wiki page on Elliptic Curve Digital Signature Algorithm **[Elliptic Curve Digital Signature Algorithm (ECDSA)](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)**. A short summary of including the crucial steps of ECDSA can be found [here](https://medium.com/coinmonks/ecdsa-the-art-of-cryptographic-signatures-d0bb254c8b96).
+
+Now we look further into the details of the mathematical function acting as the foundations of digital signature.
+
+### Hash Functions:
+
+The **Hash function** is a function. When a program is written, very often, large amounts of data
+need to be stored. These are normally stored as [hash table](https://simple.wikipedia.org/wiki/Hash_table). In order to find the data again, some value is calculated. This is like when someone reads a book, and to remember, they put what they read into their own words.
+
+A **[c](https://simple.wikipedia.org/wiki/Cryptography)ryptographic hash function** is a hash function that takes an input (or 'message') and returns a fixed-size string of bytes. The string is called the 'hash value', 'message digest', 'digital fingerprint', 'digest' or 'checksum'.
+
+The ideal hash function has three main properties:
+
+1. It is extremely easy to calculate a hash for any given data.
+2. It is extremely unlikely that two slightly different messages will have the same hash.
+3. It’s extremely computationally difficult to find the input given the value of the hash function.
+
+The most widely used hashing functions are MD5, SHA1 and SHA-256. Some hashing processes are significantly harder to crack than others. For example, SHA1 is easier to crack than bcrypt.
+
+ Here is a helpful resource to learn more on hashing: [https://medium.com/@rauljordan/the-state-of-hashing-algorithms-the-why-the-how-and-the-future-b21d5c0440de](https://medium.com/@rauljordan/the-state-of-hashing-algorithms-the-why-the-how-and-the-future-b21d5c0440de)
+
+The most popular hashing function in use is the SHA-256(used by bitcoin). To get into its details, have a look at the following:
+
+- [https://www.simplilearn.com/tutorials/cyber-security-tutorial/sha-256-algorithm](https://www.simplilearn.com/tutorials/cyber-security-tutorial/sha-256-algorithm)
+- [https://youtu.be/DMtFhACPnTY](https://youtu.be/DMtFhACPnTY)
+- [https://youtu.be/S9JGmA5_unY](https://youtu.be/S9JGmA5_unY)
+
+### Hash references:
+
+A cryptographic hash serves as a checksum for a message. If a message has been modified, it will yield a different hash. By associating a hash with a message, we have a basis for managing the integrity of that message: being able to detect if the message gets changed.
+
+One way of associating a hash with a message is with the use of hash pointers. Pointers are used in data structures to allow one data element to refer to another. In processes, a pointer is a memory location. In distributed systems, a pointer may be a name or IP address of a computer and object identifier. A **hash pointer** is a tuple that contains a traditional pointer along with the hash of the data element that is being pointed to. It allows us to validate that the information being pointed to has not been modified.
+
+The same structures that use pointers can be adapted to use hash pointers to create tamper-evident structures. For example, a linked list can be constructed with each element containing a hash pointer to the next element instead of a pointer.
+
+![https://people.cs.rutgers.edu/~pxk/419/notes/images/integrity-blockchain.png](https://people.cs.rutgers.edu/~pxk/419/notes/images/integrity-blockchain.png)
+
+                                                                       Fig: A blockchain
+
+Adding a new block is easy. You allocate the block, copy the *head* hash pointer into it (the `next` pointer), and update the *head* hash pointer to point to the new block and contain a hash of that block.
+
+If an adversary modifies, say, data block 1, we can detect that. The hash pointer in Data-2 will point to Data-1 but the hash of Data-1 will no longer match the hash in the pointer. For a successful attack, the adversary will also need to modify the hash value in the hash pointer in block 2. That will make the hash pointer in block 3 invalid, so that will need to be changed. The adversary will need to change all the hash pointers leading up to the head of the list. If we’re holding on to the head of the list (e.g., in a variable or some trusted storage) so that the adversary cannot modify it, then we will always be able to detect tampering. A linked list using hash pointers is called a **blockchain**.
+
+References(Linked lists): [https://www.geeksforgeeks.org/data-structures/linked-list/](https://www.geeksforgeeks.org/data-structures/linked-list/)
+
+Here is a nice video on the same: [https://youtu.be/IGSB9zoSx70](https://youtu.be/IGSB9zoSx70)
+
+More on cryptographic hash functions: [https://youtu.be/0WiTaBI82Mc](https://youtu.be/0WiTaBI82Mc)
+
+## What’s a block in a blockchain?
+
+Consider a case where A initiates a transaction to B worth 2 BTC (Unit of Bitcoin) and at the same initiates a transaction of the same 2 BTC to his friend C. Both the announcements will travel through different series of nodes and it may happen that at a certain node X, the second announcement reaches first. Now, unaware of the existence of another announcement of the same coin, the node X will add the second announcement and will reject the initial transaction. This would cause an irregularity in the maintained blocks. Thus, time-stamps can not be used as a tool to decide which announcement started first. In other words, a transaction arriving first does not imply it was created first. Hence, a better solution of using Blocks of transactions at once was adopted. This ensures the problem of double spending attack. The blocks can only be added to the chain when the corresponding hash of the block is correctly found. This requires computers to guess the answer. This require huge computation power. Once a correct key is found, the answer is announced to all the nodes and the block is finally added to the chain. On an average, this process takes 10 minutes in Bitcoins. Hence, unlike conventional transaction, it requires more time to complete a transaction and to get added into the chain.
+
+### What it takes to make a chain….
+
+It requires huge computation power and also speed to be able to guess the correct value corresponding to a new block. It is highly unlikely that a single computer will be able to create multiple blocks at a time. It would require huge computation power in order to achieve this. To have a 50% chance of correctly guessing each block, it would require you to have 50% of total computing power of the world. However, in theory, if you are able to make a chain longer than the existing bitcoin chain, then whatever chain you created will be used everywhere and hence, IN THEORY, you can change the entire data of transactions. But this won't happen anytime soon. And this takes us to the next idea of consensus.
+
+## Consensus
+
+A consensus is a dynamic way of reaching agreement in a group. While voting just settles for a majority rule without any thought for the feelings and well-being of the minority, a consensus, on the other hand, makes sure that an agreement is reached which could benefit the entire group as a whole. Following are some of the major Consensus mechanisms that could be implemented in blockchains:
+
+### Proof of Work(PoW):
+
+To summarize how Proof Of Work Protocol works with the blockchain.
+
+- The network has nodes called *miners* who verify transactions and include them in blocks, that get added to the chain
+- The miners solve cryptographic puzzles to *mine* a block in order to add to the blockchain
+- This process requires immense amount of energy and computational usage
+- The puzzles have been designed in a way which makes it hard and taxing on the system
+- When a miner solves the puzzle, they present their block to the network for verification
+- Verifying whether the block belongs to the chain or not is an extremely simple process
+- Miners are incentivized for their resources used in the form of a *Block Reward* associated with each block
+
+**Trivia:** Bitcoin initially started with a block reward of 50 BTC. The block reward is halved after the discovery of every 210,000 blocks, which takes around four years to complete. As of February 2018, one block reward is worth 12.5 BTC.
+
+[This article](https://cointelegraph.com/explained/proof-of-work-explained) helps answer several questions surrounding the concept of Proof of Work.
+
+### Proof of Stake(PoS):
+
+PoW is highly resource intensive and causes scalability issues. A promising alternative is the Proof of Stake mechanism. PoS will make the entire mining process virtual and replace miners with validators.This is how the process will work:
+
+- The validators will have to lock up some of their coins as stake.
+- After that, they try to discover a block which they think can be added to the chain by validating it by placing a bet on it.
+- If the block gets appended, then the validators will get a reward proportionate to their bets.
+
+Head over to [this article](https://medium.com/nakamo-to/what-is-proof-of-stake-pos-479a04581f3a) in order to understand the processes involved in Proof of Stake consensus. 
+
+The following nicely summarizes the difference and concepts regarding PoW and PoS:
+
+[https://www.geeksforgeeks.org/difference-between-proof-of-work-pow-and-proof-of-stake-pos-in-blockchain/](https://www.geeksforgeeks.org/difference-between-proof-of-work-pow-and-proof-of-stake-pos-in-blockchain/)
+
+### Immutability
+
+In the context of blockchains, it means once data has been written to a blockchain no one can change it. This is implemented by including the hash pointer of a block header in the next block. Tampering with any data on an existing block will change the block hash of that block, resulting in a discrepancy in the next block, all the way to the end of the chain. Since the currently used PoW mechanism is extremely resource-intensive, mining all the blocks again from the tampered block right to the end of the chain is *practically impossible* for the attacker.
