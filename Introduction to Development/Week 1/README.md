@@ -1,10 +1,8 @@
 # Welcome to the Week 1 of Learner's Space React & NextJS! 
 
-A warm welcome to the course!  This course mostly focuses on React and NextJS, but as you may be aware, they are built on JavaScript, therefore you must master HTML, CSS, and JavaScript from scratch in order to comprehend them.  
-
-This tutorial assumes that you have a basic knowledge of HTML like tags, attributes, etc. If you want to learn about HTML, have a look at [this](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics). You might also want to see aditional resources from [**W3 Schools**](https://www.w3schools.com/htmL/html_basic.asp). If you'd like to learn from a video tutorial, then [**this**](https://www.youtube.com/watch?v=qz0aGYrrlhU&ab_channel=ProgrammingwithMosh) video tutorial is the best to learn the basics in the shortest time possible.  
-
-Outline of our learning goals for this week is as follows:
+A warm welcome to the course!  This course mostly focuses on React and NextJS, but as you may be aware, they are built on JavaScript, therefore you must master HTML, CSS, and JavaScript from scratch in order to comprehend them. 
+This tutorial assumes that you have a basic knowledge of HTML like tags, attributes, etc. If you want to learn about HTML, have a look at [this](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+This week focusses on CSS and JavaScript based on the following:
 - Visual Studio Code (VS Code) installation
 - CSS
     - Bootstrap
@@ -29,16 +27,13 @@ Go onto [**download page**](https://code.visualstudio.com/download) of VS Code c
 
 
 ###### For Linux
-Type the following code in the terminal:  
-
-`wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -` 
-
-`sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"`  
-
-`sudo apt update`
-
+Type the following code in the terminal:
+`wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -`
+`sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+`
+`sudo apt update
+`
 `sudo apt install code`
-
 By now, VS Code should be installed on your system and you are ready to go code with it.
 
 Since, now we are done with the installation part, you can visit the beginners' guide to VS Code [here](https://code.visualstudio.com/docs/introvideos/basics) in order to get familiar with its use.
@@ -65,7 +60,7 @@ After making the file, all that's left is to get started with writing some CSS c
 To style our web pages, CSS is a great style-sheet language. However, writing the same type of code repeatedly may get incredibly tedious and exhausting. For instance: Let's say you want to add a navbar to your website, but implementing the corresponding code would undoubtedly take some time, if not a lot. Then, how about a framework that allows you to create a navbar with all of your customizations while using less code? That would be fantastic and time-saving, right?
 Bootstrap, a frontend CSS framework, is available to help with that use. A free and open-source CSS framework called Bootstrap is designed for front-end web development that prioritises mobile responsiveness. It includes design templates for typography, forms, buttons, navigation, and other interface elements that are based on HTML, CSS, and JavaScript.
 
-Using Bootstrap saves a lot of time and makes the things a lot easier making it well-worthy to learn. You can start learning about Bootstrap from it's [**documentation**](https://getbootstrap.com/docs/5.2/getting-started/introduction/). If you feel like you need more understanding of Bootstrap, then you can view [**webpage**](https://www.w3schools.com/bootstrap5/) to learn more of it. Also, [**this**](https://youtu.be/-qfEOE4vtxE) video tutorial makes it really indulging and fascinating to learn Bootstrap 5. 
+Using Bootstrap saves a lot of time and makes the things a lot easier making it well-worthy to learn. You can start learning about Bootstrap from it's [**documentation**](https://getbootstrap.com/docs/5.2/getting-started/introduction/). 
 
 ### Tailwind CSS
 
@@ -74,6 +69,33 @@ Why do we need another CSS framework when Bootstrap will do? Well, there are a f
  - Tailwind provides predesigned widgets so that users may quickly customise a site's user interface from scratch. Bootstrap, on the other hand, has a selection of pre-styled, responsive, mobile-first components that have a distinct UI kit.
  - Compared to Bootstrap, Tailwind CSS provides far more customization options. 
 
-You can start learning Tailwind CSS by following [**this link**](https://tailwindcss.com/docs/installation). You might also want to view [**this** playlist](https://youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw) to learn Tailwind CSS. 
+You can start learning Tailwind CSS by following [**this link**](https://tailwindcss.com/docs/installation). 
 
+## Basics of JavaScript
+
+Javascript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages. It is an interpreted programming language with object-oriented capabilities.
+
+Here are some articles that will guide you through everything you need to know about JavaScript for Web Dev purposes
+- [**Fundamentals Part 1**](https://www.theodinproject.com/lessons/foundations-fundamentals-part-1)
+- [**Fundamentals Part 2**](https://www.theodinproject.com/lessons/foundations-fundamentals-part-2)
+- [**Fundamentals Part 3**](https://www.theodinproject.com/lessons/foundations-fundamentals-part-3)
+- [**Problem Solving**](https://www.theodinproject.com/lessons/foundations-problem-solving)
+- [**Clean Code**](https://www.theodinproject.com/lessons/foundations-clean-code)
+- [**Fundamentals Part 4**](https://www.theodinproject.com/lessons/foundations-fundamentals-part-4)
+- [**DOM Manipulation and Events**](https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events)
+- [**Fundamentals Part 5**](https://www.theodinproject.com/lessons/foundations-fundamentals-part-5)
+
+You could also read this article to get a better insight into JS-
+[**WNCC WIki: JavaScript basics and JQuery**](https://wiki.wncc-iitb.org/index.php/JavaScript_Basics)
+
+You could also use [**this video**](https://www.youtube.com/watch?v=W6NZfCO5SIk) if you'd rather learn by watching videos.
+
+Note that there will be no assignments this week
+
+For any doubts or queries, contact us on our [**Telegram**]() group
+
+---
+<p align="center">
+    With ❤️ from <a href="https://www.wncc-iitb.org/">WnCC</a>
+</p>
 
