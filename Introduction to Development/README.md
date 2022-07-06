@@ -44,6 +44,6 @@ When you design your WebApp and see it in action in front of you, it always give
 <li><a href="https://www.facebook.com/profile.php?id=100075941285086">Parth Pujari</a>
 
 <br><br>
-<p align="center"> Created with ❤️ WnCC
+<p align="center"> Created with ❤️ by WnCC
 
 
