@@ -16,6 +16,7 @@ When you design your WebApp and see it in action in front of you, it always give
 <br>
 
 <b>Course Duration:</b> 4 Weeks
+<br>
 <b>Time commitment:</b> 12-14 hours per week
 
 <br>
@@ -35,6 +36,9 @@ When you design your WebApp and see it in action in front of you, it always give
 
 <i>No assignment for week 1.                              Assignments start from Week 2. After that assignment will be shared every week.</i> There will be total of 3 Assignments, a person doing all the 3 assignments will be awarded the certificate.
 
+<p>We will mostly be discussing the doubts and issue on the Telegram Group of this course. Join using <a href="https://t.me/+ZZlXauO91A80N2Jl">this</a> link.
+<br><br>
+Feel free to ping us whenever you have a doubt</p>
 <br>
 
 <h2><b> Moderators</b></h2>
