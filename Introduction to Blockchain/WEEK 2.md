@@ -32,7 +32,7 @@ Events and logs in Ethereum  facilitate communication between smart contracts an
      emit Deposit(msg.sender, msg.value , block.timestamp);
      }
 
-msg.sender and msg.value are global variables that specify the from address and amount of Ether that was sent. block.timestamp is a way to approximate the current time using the time of the generation of the current block.     
+`` msg.sender `` and ` msg.value` are global variables that specify the from address and amount of Ether that was sent. block.timestamp is a way to approximate the current time using the time of the generation of the current block.     
 
 ## why use Events?
 
@@ -64,7 +64,7 @@ These are the cases, explaining when to use inheritance and its advantages:
 
 ## Using the “is” Keyword in Solidity
 
-To create a derived (or inheriting) contract, simply use the is keyword, as demonstrated in the example code below:
+To create a derived (or inheriting) contract, simply use the `is` keyword, as demonstrated in the example code below:
 
     # A is a derived contract of B
     contract A is B{
@@ -171,9 +171,9 @@ First, we need to define two mapping objects. This is the Solidity notion for an
     mapping(address => uint256) balances;
     mapping(address => mapping (address => uint256)) allowed; 
 
-The first mapping object, **balances**, will hold the token balance of each owner account.
+The first mapping object, `balances`, will hold the token balance of each owner account.
 
-The second mapping object, **allowed**, will include all of the accounts approved to withdraw from a given account together with the withdrawal sum allowed for each.
+The second mapping object, `allowed`, will include all of the accounts approved to withdraw from a given account together with the withdrawal sum allowed for each.
 
 Now that we have the required data structures in place, we can start to actually write the ERC20 logic into the appropriate functions.
 
@@ -209,13 +209,13 @@ This function will return the number of all tokens allocated by this contract re
       return balances[tokenOwner];
     }
 
-**balanceOf** will return the current token balance of an account, identified by its owner’s address.
+`` balanceOf `` will return the current token balance of an account, identified by its owner’s address.
 
 
-> Before moving to next function, let's learn about **require** 
+> Before moving to next function, let's learn about ``require ``
 statements. As we might need them later.
 
-The **require** statements declare prerequisites for running the function i.e. it declares the constraints which should be satisfied before executing the code
+The `` require `` statements declare prerequisites for running the function i.e. it declares the constraints which should be satisfied before executing the code
 
 ### Syntax:
     require(condition,"Error Message");
@@ -272,7 +272,7 @@ This function is most often used in a token marketplace scenario.
       return true;
     }
 
-What **_approve_** does is to allow an owner i.e. **_msg.sender_** to approve a delegate account — possibly the marketplace itself — to withdraw tokens from his account and to transfer them to other accounts.
+What `` approve`` does is to allow an owner i.e. ``msg.sender`` to approve a delegate account — possibly the marketplace itself — to withdraw tokens from his account and to transfer them to other accounts.
 
 As you can see, this function is used for scenarios where owners are offering tokens on a marketplace. It allows the marketplace to finalize the transaction without waiting for prior approval.
 
@@ -286,11 +286,11 @@ As you can see, this function is used for scenarios where owners are offering to
     }
 
 
-This function returns the current approved number of tokens by an owner to a specific delegate, as set in the **approve** function.
+This function returns the current approved number of tokens by an owner to a specific delegate, as set in the ``approve`` function.
 
 ## Transfer Tokens by Delegate
 
-The **transferFrom** function is the peer of the **approve** function, which we discussed previously. It allows a delegate approved for withdrawal to transfer owner funds to a third-party account.
+The ``transferFrom`` function is the peer of the ``approve`` function, which we discussed previously. It allows a delegate approved for withdrawal to transfer owner funds to a third-party account.
 
     function transferFrom(address owner, address buyer,
                      uint numTokens) public returns (bool) {
@@ -306,9 +306,9 @@ The **transferFrom** function is the peer of the **approve** function, which we 
 
 
 
-The two **_require_** statements at function start are to verify that the transaction is legitimate, i.e4. that the owner has enough tokens to transfer and that the delegate has approval for (at least) **_numTokens_** to withdraw.
+The two ``require`` statements at function start are to verify that the transaction is legitimate, i.e4. that the owner has enough tokens to transfer and that the delegate has approval for (at least) ``numTokens`` to withdraw.
 
-In addition to transferring the **_numTokens_** amount from owner to buyer, this function also subtracts **_numTokens_** from the delegate’s allowance. This basically allows a delegate with a given allowance to break it into several separate withdrawals, which is typical marketplace behavior.
+In addition to transferring the ``numTokens`` amount from owner to buyer, this function also subtracts ``numTokens`` from the delegate’s allowance. This basically allows a delegate with a given allowance to break it into several separate withdrawals, which is typical marketplace behavior.
 
 
 
@@ -324,7 +324,7 @@ Read this [article](https://medium.com/coinmonks/solidity-tutorial-all-about-mod
 </br>
 
 
-Extensibility is key when it comes to building larger, more complex distributed applications (dapps). Solidity offers two ways to facilitate this in your dapps: **abstract contracts** and **interfaces**.
+Extensibility is key when it comes to building larger, more complex distributed applications (dapps). Solidity offers two ways to facilitate this in your dapps: `` abstract contracts `` and  `` interfaces ``.
 
 ## Abstract Contracts
 
@@ -360,17 +360,14 @@ Interfaces are expressed using the interface keyword. Here’s an example:
     function transfer(address to, uint256 value) public returns (bool);
     }
 
-//
-..
-..
-//
+
 
 # **Fallback Function and Receive Ether Function**
 
 A fallback function is a function within a smart contract that is called if no other function in the contract matches the specified function in the call. This can happen if the call has a typo or if it specifies no function at all.
 
 
-> Solidity knows two different functions for that purpose – **fallback()** and **receive()**.
+> Solidity knows two different functions for that purpose – `` fallback()`` and ``receive()``.
 
 ## receive()
 
