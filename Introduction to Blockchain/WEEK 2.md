@@ -136,6 +136,21 @@ In cases when a derived contract does not include arguments for all the Solidity
 Go through [this](https://medium.com/0xcode/inheritance-in-smart-contracts-using-object-oriented-methodology-ca43fa4775a1) article on inheritence as well!
 
 
+# **Error Handling**
+
+Errors and exceptions are the norms in programming and Solidity provide ample infrastructure for managing both.
+
+  From version 4.10 of Solidity newer error handling constructs were introduced and therefore the throw
+ was made obsolete. These were the assert, require, and revert statements
+
+Read [this][https://www.geeksforgeeks.org/solidity-error-handling/] article and watch [this](https://www.youtube.com/watch?v=1Mi1ub9bIv8&list=PLbbtODcOYIoE0D6fschNU4rqtGFRpk3ea&index=25) video as well
+
+
+
+If you confusion over when to use ``Assert()`` and when to use ``require()``
+read [this] (https://codedamn.com/news/solidity/assert-vs-require-in-solidity) article.
+
+
 
 # **ERC20 Tokens**
 
@@ -217,31 +232,6 @@ statements. As we might need them later.
 
 The `` require `` statements declare prerequisites for running the function i.e. it declares the constraints which should be satisfied before executing the code
 
-### Syntax:
-    require(condition,"Error Message");
-
-Note that custom string message ("Error message" here) is optional.
-</br>
-### Example:
-    // SPDX-License-Identifier: MIT
-
-    pragma solidity ^0.8.7;
-
-    contract RequireStatement {
-    function requireStatement(uint _input) public view returns(string memory){
-        require(_input >= 0, "invalid uint8");
-        require(_input <= 255, "invalid uint8");
-        return "Input is Uint8";
-    }   
-
-#### Output:
-when we pass input as 78 we get
-
-    "0 : Input is Uint8"
-
-when we pass input as 748 we get
-
-    "0 : invalid uint8"
 
 
 Coming back to ERC20..
