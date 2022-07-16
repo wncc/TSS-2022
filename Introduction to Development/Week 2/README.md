@@ -111,7 +111,7 @@ You guys might be aware that all the weeks following week 1 will have assignment
 <br>
 <h3>Project Statement:</h3>
 
-Let's say you are going to Bangalore for your dream internship in your dream company. You are going to live in a PG near your office. Your PG offers several facilities such as a large inventory of sports equipment, musical instruments for music enthusiasts, and tech inventory having stuff like sensors, breadboards, Arduino, micro-controllers, etc. 
+Let's say you are going to Bangalore. You are going to live in a PG near your office. Your PG offers several facilities such as a large inventory of sports equipment, musical instruments for music enthusiasts, and tech inventory having stuff like sensors, breadboards, Arduino, micro-controllers, etc. 
 <br>But one thing that you're pissed about is the issuing system. Your PG still uses the old-school method of booking these things using pen-paper. You, being a pro programmer decided to make an inventory portal for your PG. 
 <br><br>
 <h3>Assignment for this week</h3>
