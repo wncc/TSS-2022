@@ -2,6 +2,7 @@
 _WE'll cover following topics this week:_
 > - Events
 > - Inheritence
+> - Error Handling
 > - ERC20 tokens
 
 
@@ -74,6 +75,7 @@ To create a derived (or inheriting) contract, simply use the `is` keyword, as de
 
 As mentioned earlier, Solidity allows for multiple inheritances. You can implement multiple inheritances in solidity as shown in this sample code:
 
+    ```solidity
     contract A{
 
     }
@@ -87,6 +89,7 @@ As mentioned earlier, Solidity allows for multiple inheritances. You can impleme
     contract C is A,B {
 
     }
+    ```
 
 
 Derived contracts access all non-private members (state variables and internal functions as well). It is not possible to access them externally through **this** keyword.
@@ -143,7 +146,7 @@ Errors and exceptions are the norms in programming and Solidity provide ample in
   From version 4.10 of Solidity newer error handling constructs were introduced and therefore the throw
  was made obsolete. These were the assert, require, and revert statements
 
-Read [this][https://www.geeksforgeeks.org/solidity-error-handling/] article and watch [this](https://www.youtube.com/watch?v=1Mi1ub9bIv8&list=PLbbtODcOYIoE0D6fschNU4rqtGFRpk3ea&index=25) video as well
+Read [this](https://www.geeksforgeeks.org/solidity-error-handling/) article and watch [this](https://www.youtube.com/watch?v=1Mi1ub9bIv8&list=PLbbtODcOYIoE0D6fschNU4rqtGFRpk3ea&index=25) video as well
 
 
 
@@ -158,6 +161,7 @@ _what is ERC20?_
 
 Put simply, the ERC20 standard defines a set of functions to be implemented by all ERC20 tokens so as to allow integration with other contracts, wallets, or marketplaces. This set of functions is rather short and basic.
 
+    ```solidity
     function totalSupply() public view returns (uint256);
     function balanceOf(address tokenOwner) public view returns (uint);
     function allowance(address tokenOwner, address spender)
@@ -165,15 +169,18 @@ Put simply, the ERC20 standard defines a set of functions to be implemented by a
     function transfer(address to, uint tokens) public returns (bool);
     function approve(address spender, uint tokens)  public returns (bool);
     function transferFrom(address from, address to, uint tokens) public returns (bool);
+    ```
 
 ERC20 functions allow an external user, say a crypto-wallet app, to find out a user’s balance and transfer funds from one user to another with proper authorization.
 
 The smart contract defines two specifically defined events:
 
+    ```solidity
     event Approval(address indexed tokenOwner, address indexed spender,
     uint tokens);
     event Transfer(address indexed from, address indexed to,
     uint tokens);
+    ```
 
 These events will be invoked or emitted when a user is granted rights to withdraw tokens from an account, and after the tokens are actually transferred.
 
@@ -211,18 +218,20 @@ There are number of ways of seeting up number of ICO tokens for the needs of our
 ## Get Total Token Supply
 
 
-
+    ```solidity
     function totalSupply() public view returns (uint256) {
       return totalSupply_;
     }
+    ```
 
 This function will return the number of all tokens allocated by this contract regardless of owner.
 
 ## Get Token Balance of Owner
-
+    ```solidity
     function balanceOf(address tokenOwner) public view returns (uint) {
       return balances[tokenOwner];
     }
+    ```
 
 `` balanceOf `` will return the current token balance of an account, identified by its owner’s address.
 
@@ -237,7 +246,7 @@ The `` require `` statements declare prerequisites for running the function i.e.
 Coming back to ERC20..
 
 ## Transfer Tokens to Another Account
-
+    ```solidity
     function transfer(address receiver,
                  uint numTokens) public returns (bool) {
       require(numTokens <= balances[msg.sender]);
@@ -246,6 +255,7 @@ Coming back to ERC20..
       emit Transfer(msg.sender, receiver, numTokens);
       return true;
     }
+    ```
 
 
 As its name suggests, the transfer function is used to move numTokens amount of tokens from the owner’s balance to that of another user, or receiver. The transferring owner is msg.sender i.e. the one executing the function, which implies that only the owner of the tokens can transfer them to others.
@@ -254,13 +264,14 @@ As its name suggests, the transfer function is used to move numTokens amount of 
 
 
 This function is most often used in a token marketplace scenario.
-
+    ```solidity
     function approve(address delegate,
                uint numTokens) public returns (bool) {
       allowed[msg.sender][delegate] = numTokens;
       emit Approval(msg.sender, delegate, numTokens);
       return true;
     }
+    ```
 
 What `` approve`` does is to allow an owner i.e. ``msg.sender`` to approve a delegate account — possibly the marketplace itself — to withdraw tokens from his account and to transfer them to other accounts.
 
@@ -269,11 +280,12 @@ As you can see, this function is used for scenarios where owners are offering to
 
 
 ## Get Number of Tokens Approved for Withdrawal
-
+    ```solidity
     function allowance(address owner,
                       address delegate) public view returns (uint) {
       return allowed[owner][delegate];
     }
+    ```
 
 
 This function returns the current approved number of tokens by an owner to a specific delegate, as set in the ``approve`` function.
@@ -281,7 +293,7 @@ This function returns the current approved number of tokens by an owner to a spe
 ## Transfer Tokens by Delegate
 
 The ``transferFrom`` function is the peer of the ``approve`` function, which we discussed previously. It allows a delegate approved for withdrawal to transfer owner funds to a third-party account.
-
+    ```solidity
     function transferFrom(address owner, address buyer,
                      uint numTokens) public returns (bool) {
       require(numTokens <= balances[owner]);
@@ -293,6 +305,7 @@ The ``transferFrom`` function is the peer of the ``approve`` function, which we 
       Transfer(owner, buyer, numTokens);
       return true;
     }
+    ```
 
 
 
@@ -321,7 +334,7 @@ Extensibility is key when it comes to building larger, more complex distributed 
 Contracts are identified as abstract contracts when at least one of their functions lacks an implementation. As a result, they cannot be compiled. They can however be used as base contracts from which other contracts can inherit from.
 
 Here’s an example:
-
+    ```solidity
     pragma solidity ^0.4.24;
 
     contract Person {
@@ -331,6 +344,7 @@ Here’s an example:
     contract Employee is Person {
     function gender() public returns (bytes32) { return "female"; }
     }
+    ```
 
 
  Along with improved extensibility, abstract contracts provide better self-documentation, instill patterns , and eliminate code duplication.
@@ -364,10 +378,12 @@ A fallback function is a function within a smart contract that is called if no o
 The receive() method is used as a fallback function if Ether are sent to the contract and no calldata are provided (no function is specified). It can take any value. If the receive() function doesn’t exist, the fallback() method is used.
 </br>
 A contract can have at most one receive() function. The receive() function is declared:
+    ```solidity
 
     receive() external payable{
       // your code here…
     } 
+    ```
 
 ## fallback()
 
@@ -376,14 +392,16 @@ The fallback() function is used if a smart contract is called and no other funct
 It works, if calldata are included. But it is optionally payable.
 
 The declaration looks like that:
-
+    ```solidity
     fallback() external [payable] {
       // your code here…
     }
+    ```
 
 Lets do an example:
 
 Let's add a receive fallback function to the Smart Contract so we can simply send 1 Ether to the Contract without directly interacting with a concrete function.
+    ```solidity
 
     //SPDX-License-Identifier: MIT
 
@@ -409,3 +427,4 @@ Let's add a receive fallback function to the Smart Contract so we can simply sen
         receiveMoney();
     }
     }
+    ```
