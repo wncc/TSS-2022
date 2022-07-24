@@ -92,3 +92,5 @@ Well, I hope you had a good time reading these articles and now you have a deepe
 Please follow along <a href = "https://www.youtube.com/watch?v=_N6LQd6Y2UY&ab_channel=ChrisBlakely">this</a> tutorial to create a basic app using React Hooks!
 
 ## Custom Hooks
+
+Building your own Hooks lets you extract component logic into reusable functions. A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks.
