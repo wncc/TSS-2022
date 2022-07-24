@@ -93,4 +93,4 @@ Please follow along <a href = "https://www.youtube.com/watch?v=_N6LQd6Y2UY&ab_ch
 
 ## Custom Hooks
 
-Building your own Hooks lets you extract component logic into reusable functions. A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks. Read <a href = "https://reactjs.org/docs/hooks-custom.html">this official documentation</a> inorder to start building your own hooks
+Building your own Hooks lets you extract component logic into reusable functions. A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks. Read <a href = "https://reactjs.org/docs/hooks-custom.html">this official documentation</a> inorder to start building your own hooks. You can also watch <a href = "https://www.youtube.com/watch?v=O6FhJvcvVOE&ab_channel=JavaScriptMastery">this video</a> and code side by side to build your own react hooks. 
