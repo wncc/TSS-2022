@@ -77,7 +77,7 @@ For example, the logic to fetch data and manage the data in a local variable is 
 
 <b>React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects.</b>
 
-I hope you got the meaning of a react hook, if yes, its absolutely necessary for you to read the five articles that I am providing here and keep on reading and implementing these articles till you aren't absolutely clear with them.
+I hope you got the meaning of a react hook, if yes, its absolutely necessary for you to read the five articles that I am providing here and keep on reading and implementing these articles till you are absolutely clear with them.
 
 <ul>
 <li><a href = "https://reactjs.org/docs/hooks-intro.html"> Introduction to Hooks</a></li>
