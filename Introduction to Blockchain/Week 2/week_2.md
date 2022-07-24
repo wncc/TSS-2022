@@ -246,7 +246,8 @@ The `` require `` statements declare prerequisites for running the function i.e.
 Coming back to ERC20..
 
 ## Transfer Tokens to Another Account
-    ```solidity
+
+   
     function transfer(address receiver,
                  uint numTokens) public returns (bool) {
       require(numTokens <= balances[msg.sender]);
@@ -255,7 +256,7 @@ Coming back to ERC20..
       emit Transfer(msg.sender, receiver, numTokens);
       return true;
     }
-    ```
+   
 
 
 As its name suggests, the transfer function is used to move numTokens amount of tokens from the owner’s balance to that of another user, or receiver. The transferring owner is msg.sender i.e. the one executing the function, which implies that only the owner of the tokens can transfer them to others.
@@ -316,7 +317,7 @@ In addition to transferring the ``numTokens`` amount from owner to buyer, this f
 
 
 
-//
+
 
 
 
