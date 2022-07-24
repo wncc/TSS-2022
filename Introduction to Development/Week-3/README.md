@@ -81,7 +81,7 @@ I hope you got the meaning of a react hook, if yes, its absolutely necessary for
 
 <ul>
 <li><a href = "https://reactjs.org/docs/hooks-intro.html"> Introduction to Hooks</a></li>
-<li><a hrerf = "https://reactjs.org/docs/hooks-overview.html">Hooks at Glance</a></li>
+<li><a href = "https://reactjs.org/docs/hooks-overview.html">Hooks at Glance</a></li>
 <li><a href = "https://reactjs.org/docs/hooks-state.html">Using the State Hook</a></li>
 <li><a href = "https://reactjs.org/docs/hooks-effect.html">Using the Effect Hook</a></li>
 <li><a href = "https://reactjs.org/docs/hooks-rules.html">Rules of Hooks</a></li>
