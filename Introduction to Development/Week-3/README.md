@@ -96,6 +96,6 @@ Please follow along <a href = "https://www.youtube.com/watch?v=_N6LQd6Y2UY&ab_ch
 Building your own Hooks lets you extract component logic into reusable functions. A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks. Read <a href = "https://reactjs.org/docs/hooks-custom.html">this official documentation</a> inorder to start building your own hooks. You can also watch <a href = "https://www.youtube.com/watch?v=O6FhJvcvVOE&ab_channel=JavaScriptMastery">this video</a> and code side by side to build your own react hooks. 
 
 ## Assignment: Week-3
-In this week's assignment you need to work on adding the different items from the inventory to your cart and then go the final page for issuing the added items. You need to use your knowledge of React hooks for updating the state of your application.
+In this week's assignment you need to work on adding different items from the inventory to your cart and then go the final page for issuing the added items. You need to use your knowledge of React hooks for updating the state of your application.
 
 Bonus: Try making your custom hook, to make your application responsive. You can use this hook to conditionally render some elements or components in a different way depending upon the device on which a user is using your application!
