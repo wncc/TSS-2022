@@ -140,3 +140,11 @@ It controls the application’s core functionality by performing detailed proces
 Houses database servers where information is stored and retrieved.
 
 Data in this tier is kept independent of application servers or business logic, and is managed and accessed with programs, such as MongoDB, Oracle, MySQL, and Microsoft SQL Server.
+
+## Assignment 
+
+Now comes the assignment that you all have been waiting for. NextJS is not difficult if you are comfortable with ReactJS. 
+For this week's assignment there not much as compared to other weeks' assignment. It'd be pretty easy if you are good with react and have a smooth transition to the NextJS's SSA(Server-side rendering).
+<br><br>
+You have to make your existing website(the inventory website) a progressive-web-app (PWA) and also transition it to server side rendering for SEO.
+
