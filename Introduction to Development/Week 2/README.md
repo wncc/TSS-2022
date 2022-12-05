@@ -60,7 +60,7 @@ Node.js is an open-source, cross-platform, back-end JavaScript runtime environme
 
 In simple words, NodeJS creates a JavaScript runtime environment to host web pages. That's the simplest definition of NodeJS we should be concerned with being a beginner. <br>
 <br>Why do we use NodeJS for React?<br>
-There are a couple of reasons to use RectJS and NodeJS together. You can have a look at <a href="https://programmers.io/web-development-using-reactjs-with-nodejs/#:~:text=Reasons%20to%20Use%20Node%20JS%20and%20React%20JS%20Together&text=High%20Server%20Load%3A%20Using%20Node,enables%20sharing%20within%20React%20JS."> this article </a> to know about it.
+There are a couple of reasons to use ReactJS and NodeJS together. You can have a look at <a href="https://programmers.io/web-development-using-reactjs-with-nodejs/#:~:text=Reasons%20to%20Use%20Node%20JS%20and%20React%20JS%20Together&text=High%20Server%20Load%3A%20Using%20Node,enables%20sharing%20within%20React%20JS."> this article </a> to know about it.
 
 <br>Now it's clear why we use NodeJS, let's jump to its installation. You can download NodeJS for your OS from <a href="https://nodejs.org/en/download/"> this link </a>. Once done with the download, install it as the prompt says. GREAT! You're done with NodeJS installation!
 <br><br>
